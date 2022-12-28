@@ -31,10 +31,12 @@ html{
     display: grid;
     grid-template: 1fr 5fr/1fr 5fr;
     grid-template-areas: "nav header" "nav main";
+    
 }
 
 .container > div{
     border: 0.1rem solid black;
+    
 }
 
 .nav{
@@ -62,4 +64,5 @@ html{
 
 .main{
     grid-area: main;
+    font-size: 2rem !important;
 }

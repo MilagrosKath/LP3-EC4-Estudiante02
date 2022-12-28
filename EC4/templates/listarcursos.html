@@ -1,4 +1,20 @@
 {% extends 'layout.html' %}
 {% block main %}
     <h2>Listar cursos</h2>
+    <ul>
+        {% for curso in cursos %}
+            <li>
+                {{forloop.counter}}.{{curso.name}}
+                <p>
+                    {{curso.contenido}}
+                    {{curso.estado}}
+                </p>
+                <a href="{% url 'eliminarCurso' id=curso.id %}">Eliminar curso</a>
+            </li>
+        {% empty %}
+            <p>
+                No hay
+            </p>
+        {% endfor %}
+    </ul>
 {% endblock main %}

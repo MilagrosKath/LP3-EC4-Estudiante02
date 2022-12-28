@@ -1,4 +1,9 @@
 {% extends 'layout.html' %}
 {% block main %}
     <h2>Agregar cursos</h2>
+    <form action="{% url 'crearFullCursos' %}" method="POST">
+        {% csrf_token %}
+        {{formulario.as_p}}
+        <input type="submit" value="Agregar">
+    </form>
 {% endblock main %}
