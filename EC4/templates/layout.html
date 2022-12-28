@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>{% block title %} {% endblock title %} | EC4</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Evidencia 4 - LP3
+        </div>
+        <div class="nav">
+            <ul>
+                <a href="/listarCursos"><li>Listar cursos</li></a>
+                <a href="/crearCursos"><li>Crear cursos</li></a>
+                <a href="/listarCarreras"><li>Listar carreras</li></a>
+                <a href="/crearCarreras"><li>Crear carreras</li></a>
+            </ul>
+        </div>
+        <div class="main">
+            {% block main %}{% endblock  %}
+        </div>
+    </div>
+
+</body>
+</html>
